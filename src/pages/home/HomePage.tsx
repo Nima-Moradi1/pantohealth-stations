@@ -3,12 +3,12 @@ import { observer } from 'mobx-react-lite';
 import { useStationsStore } from '../../hooks/useStationStore';
 import { CityFilter } from '../../components/molecules/CityFilter/CityFilter';
 import { StationsList } from '../../components/organisms/StationList/StationList';
+import { StationsMap } from '../../components/organisms/StationsMap/StationsMap';
 
 const HomePage = observer(function HomePage() {
   const store = useStationsStore();
 
   useEffect(() => {
-    // single load on entry -> store owns the request state.
     void store.loadStations();
   }, [store]);
 
@@ -23,9 +23,7 @@ const HomePage = observer(function HomePage() {
       </section>
 
       <section className="rounded-lg border border-border bg-surface p-4 shadow-card">
-        <p className="text-sm text-muted-fg">
-          Map placeholder — next we will mount Leaflet and sync selection + filter.
-        </p>
+        <StationsMap />
       </section>
     </div>
   );
