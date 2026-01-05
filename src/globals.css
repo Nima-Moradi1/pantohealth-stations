@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@tailwind utilities;
+
+/* design system tokens via CSS variables */
+:root {
+  --bg: 250 250 250;
+  --fg: 17 24 39;
+
+  --surface: 255 255 255;
+  --border: 229 231 235;
+
+  --primary: 15 118 110;
+  --primary-fg: 255 255 255;
+
+  --muted: 243 244 246;
+  --muted-fg: 75 85 99;
+
+  --danger: 220 38 38;
+  --danger-fg: 255 255 255;
+
+  --radius-md: 10px;
+  --radius-lg: 14px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
