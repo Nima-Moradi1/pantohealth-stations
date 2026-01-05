@@ -1,7 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss/preflight";
-@tailwind utilities;
-@tailwind utilities;
 
 /* design system tokens via CSS variables */
 :root {
