@@ -10,7 +10,7 @@ export const StationsList = observer(function StationsList() {
   if (!stations.length) return <p className="text-sm text-muted-fg">No stations found.</p>;
 
   return (
-    <ul className="divide-y divide-border overflow-hidden rounded-lg border border-border bg-surface">
+    <ul className="divide-y divide-border overflow-hidden rounded-lg border border-border max-h-155 overflow-y-auto p-1">
       {stations.map((s) => {
         const selected = store.selectedStationId === s.id;
 

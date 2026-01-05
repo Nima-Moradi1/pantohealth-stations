@@ -46,3 +46,19 @@ body {
   height: 18px;
   background: rgb(var(--fg));
 }
+
+/* hiding the scrollbar */
+
+@media (hover: hover) {
+  *::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+
+  *:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
